@@ -33,7 +33,7 @@ set tags=/home/skye/tags
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap { {<CR><CR>}<Esc>O
+inoremap { {<CR>}<Esc>O
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
