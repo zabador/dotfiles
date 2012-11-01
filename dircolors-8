@@ -1,0 +1,266 @@
+# Configuration file for dircolors, a utility to help you set the
+# LS_COLORS environment variable used by GNU ls with the --color option.
+# Copyright (C) 1996, 1999-2011 Free Software Foundation, Inc.
+# Copying and distribution of this file, with or without modification,
+# are permitted provided the copyright notice and this notice are preserved.
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+# slackware version of dircolors) are recognized but ignored.
+# Below, there should be one TERM entry for each termtype that is colorizable
+
+TERM Eterm
+TERM ansi
+TERM color-xterm
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM eterm-color
+TERM gnome
+TERM gnome-256color
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mlterm
+TERM putty
+TERM rxvt
+TERM rxvt-256color
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM rxvt-unicode-256color
+TERM rxvt-unicode256
+TERM screen
+TERM screen-256color
+TERM screen-256color-bce
+TERM screen-bce
+TERM screen-w
+TERM screen.rxvt
+TERM screen.linux
+TERM terminator
+TERM vt100
+TERM xterm
+TERM xterm-16color
+TERM xterm-256color
+TERM xterm-88color
+TERM xterm-color
+TERM xterm-debian
+
+# Below are the color init strings for the basic file types. A color init
+# string consists of one or more of the following numeric codes:
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+#NORMAL 00 # no color code at all
+#FILE 00 # regular file: use no color at all
+RESET 0 # reset to "normal" color
+DIR 01;34 # directory
+LINK 01;36 # symbolic link. (If you set this to 'target' instead of a
+ # numerical value, the color is as for the file pointed to.)
+MULTIHARDLINK 00 # regular file with more than one link
+FIFO 40;33 # pipe
+SOCK 01;35 # socket
+DOOR 01;35 # door
+BLK 40;33;01 # block device driver
+CHR 40;33;01 # character device driver
+ORPHAN 40;31;01 # symlink to nonexistent file, or non-stat'able file
+SETUID 37;41 # file that is setuid (u+s)
+SETGID 30;43 # file that is setgid (g+s)
+CAPABILITY 30;41 # file with capability
+STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
+STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
+EXEC 01;32 # This is for files with execute permission:
+
+.7z 01;31
+.a 01;31
+.cab 01;31
+.arj 01;31
+.deb 01;31
+.egg 01;31
+.pkg 01;31
+.bz2 01;31
+.cbr 01;31
+.cbz 01;31
+.chm 01;31
+.dmg 01;31
+.gz 01;31
+.iso 01;31
+.jad 01;31
+.jar 01;31
+.nrg 01;31
+.pdf 01;31
+.rar 01;31
+.vcd 01;31
+.t 01;31
+.tar 01;31
+.tgz 01;31
+.xz 01;31
+.z 01;31
+.zip 01;31
+.ai 01;32
+.bmp 01;32
+.cdr 01;32
+.eps 01;32
+.gif 01;32
+.icns 01;32
+.ico 01;32
+.jpeg 01;32
+.jpg 01;32
+.pbm 01;32
+.pgm 01;32
+.png 01;32
+.pnm 01;32
+.ppm 01;32
+.ps 01;32
+.psd 01;32
+.raw 01;32
+.svg 01;32
+.tif 01;32
+.tiff 01;32
+.xpm 01;32
+.applescript 01;33
+.asm 01;33
+.awk 01;33
+.bash 01;33
+.bat 01;33
+.c 01;33
+.cl 01;33
+.cmd 01;33
+.coffee 01;33
+.cpp 01;33
+.cs 01;33
+.diff 01;33
+.el 01;33
+.go 01;33
+.h 01;33
+.hs 01;33
+.java 01;33
+.js 01;33
+.jsp 01;33
+.lua 01;33
+.m 01;33
+.patch 01;33
+.pl 01;33
+.pm 01;33
+.pod 01;33
+.ps 01;33
+.py 01;33
+.r 01;33
+.rb 01;33
+.sed 01;33
+.sh 01;33
+.sql 01;33
+.sty 01;33
+.tac 01;33
+.tcl 01;33
+.tex 01;33
+.tfm 01;33
+.vb 01;33
+.vim 01;33
+.wsgi 01;33
+.zsh 01;33
+.ascx 00;34
+.ashx 00;34
+.aspx 00;34
+.css 00;34
+.erb 00;34
+.htm 00;34
+.html 00;34
+.php 00;34
+.sass 00;34
+.scss 00;34
+.less 00;34
+.rst 00;34
+.textile 00;34
+.markdown 00;34
+.md 00;34
+.mkd 00;34
+.genshi 00;34
+.jinja 00;34
+.mako 00;34
+.django 00;34
+.haml 00;34
+.cfg 01;35
+.chm 01;35
+.conf 01;35
+.csv 01;35
+.doc 01;35
+.docx 01;35
+.dvi 01;35
+.epub 01;35
+.ini 01;35
+.json 01;35
+.key 01;35
+.log 01;35
+.mobi 01;35
+.msg 01;35
+.nfo 01;35
+.odf 01;35
+.pages 01;35
+.pdf 01;35
+.pps 01;35
+.ppt 01;35
+.pptx 01;35
+.rtf 01;35
+.txt 01;35
+.vcf 01;35
+.wpd 01;35
+.wps 01;35
+.xls 01;35
+.xlsx 01;35
+.xml 01;35
+.yml 01;35
+.3g2 01;36
+.3gp 01;36
+.aac 01;36
+.aif 01;36
+.asf 01;36
+.asx 01;36
+.avi 01;36
+.cue 01;36
+.dat 01;36
+.fcm 01;36
+.flac 01;36
+.flv 01;36
+.iff 01;36
+.m3u 01;36
+.m4a 01;36
+.mkv 01;36
+.mod 01;36
+.mov 01;36
+.mp3 01;36
+.mp4 01;36
+.mpa 01;36
+.mpeg 01;36
+.mpg 01;36
+.ogv 01;36
+.ra 01;36
+.rm 01;36
+.s3m 01;36
+.sid 01;36
+.spl 01;36
+.spx 01;36
+.swf 01;36
+.ts 01;36
+.vob 01;36
+.wav 01;36
+.wma 01;36
+.wmv 01;36
+
+#  vim:set ft=dircolors:
