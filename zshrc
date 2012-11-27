@@ -1,4 +1,4 @@
-# Set up the prompt
+
 fg_black=%{$'\e[0;30m'%}
 fg_red=%{$'\e[0;31m'%}
 fg_green=%{$'\e[0;32m'%}
@@ -50,11 +50,12 @@ vcs_info 'prompt'
 if [ -n vcs_info_msg_0_ ]; then
 PROMPT="
 ${fg_lred}%n@%m${fg_pink}%~ ${fg_cyan}${vcs_info_msg_1_}
-${fg_lred}l33tness--> ${at_normal}"
+${fg_lred}1337ness--> ${at_normal}"
+RPROMPT="${fg_green}$(spotify)"
 else
 PROMPT="
 ${fg_lred}%n@%m${fg_pink}%~
-${fg_lred}l33tness--> ${at_normal}"
+${fg_lred}1337ness--> ${at_normal}"
 fi
 }
 
@@ -86,8 +87,8 @@ else
     eval $(dircolors)
 fi
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -121,3 +122,4 @@ typeset -U fpath
 
 source /home/skye/.shellStuff/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/skye/.shellStuff/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /home/skye/.shellStuff/spot_info.zsh
