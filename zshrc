@@ -1,4 +1,3 @@
-
 fg_black=%{$'\e[0;30m'%}
 fg_red=%{$'\e[0;31m'%}
 fg_green=%{$'\e[0;32m'%}
@@ -46,6 +45,8 @@ zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
 
 precmd() {
 vcs_info 'prompt'
+
+setopt CORRECT 
 
 if [ -n vcs_info_msg_0_ ]; then
 PROMPT="
