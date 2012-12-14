@@ -94,3 +94,7 @@ if exists("syntax on")
       highlight Constant   term=none ctermfg=red    cterm=bold guifg=red    gui=none
       highlight Comment    term=none ctermfg=blue     cterm=none guifg=blue     gui=none
       "
+"Added by android-vim:
+set tags+=/home/zabador/.vim/tags
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+let g:SuperTabDefaultCompletionType = 'context'
