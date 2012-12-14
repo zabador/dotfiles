@@ -50,7 +50,7 @@ setopt CORRECT
 
 if [ -n vcs_info_msg_0_ ]; then
 PROMPT="
-${fg_lred}%n@%m${fg_pink}%~ ${fg_cyan}${vcs_info_msg_1_}
+${fg_lred}%n@%m${fg_pink}%~ $(git_super_status)
 ${fg_lred}1337ness--> ${at_normal}"
 RPROMPT="${fg_green}$(spotify)"
 else
@@ -123,4 +123,5 @@ typeset -U fpath
 
 source /home/zabador/.shellStuff/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/zabador/.shellStuff/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /home/zabador/.shellStuff/spot_info.zsh
+source /home/zabador/.shellStuff/PySpotifyInfo/spot_info.zsh
+source /home/zabador/.shellStuff/zsh-git-prompt/zshrc.sh
