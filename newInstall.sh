@@ -13,9 +13,9 @@ sudo apt-get install spotify-client &&
 sudo apt-get install exuberant-ctags &&
 wget http://dl.google.com/android/android-sdk_r21-linux.tgz &&
 tar -xvf android-sdk_r21-linux.tgz &&
-mv android-sdk-linux ~/.android-sdks &&
+mv -f android-sdk-linux .android-sdks &&
+mv -f .android-sdks ~/ &&
 ~/.android-sdks/tools/android &&
-cd .. &&
 #
 
 dir=~/dotfiles                    # dotfiles directory
@@ -41,17 +41,19 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-mkdir tmp &&
-cd tmp &&
-wget http://voxel.dl.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz &&
-tar -xvf ctags-5.8.tar.gz
-cd ctags-5.8 &&
-sudo ./configure &&
-sudo make &&
-sudo cp ctags /usr/local/bin/ctags && sudo chmod 755 /usr/local/bin/ctags &&
-sudo cp ./ctags.1 /usr/local/share/man/man1/ctags.1 && sudo chmod 644 /usr/local/share/man/man1/ctags.1 &&
-sudo make install &&
-cd ~/.shellStuff/vim-android &&
-sudo chmod +x android-install.sh &&
-./android-install.sh &&
-source ~/.zshrc
+
+zsh
+#mkdir tmp &&
+#cd tmp &&
+#wget http://voxel.dl.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz &&
+#tar -xvf ctags-5.8.tar.gz
+#cd ctags-5.8 &&
+#sudo ./configure &&
+#sudo make &&
+#sudo cp ctags /usr/local/bin/ctags && sudo chmod 755 /usr/local/bin/ctags &&
+#sudo cp ./ctags.1 /usr/local/share/man/man1/ctags.1 && sudo chmod 644 /usr/local/share/man/man1/ctags.1 &&
+#sudo make install &&
+#cd ~/.shellStuff/vim-android &&
+#sudo chmod +x android-install.sh &&
+#./android-install.sh &&
+#source ~/.zshrc
