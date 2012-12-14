@@ -16,6 +16,7 @@ tar -xvf android-sdk_r21-linux.tgz &&
 mv -f android-sdk-linux .android-sdks &&
 mv -f .android-sdks ~/ &&
 ~/.android-sdks/tools/android &&
+rm android-sdk* &&
 #
 
 dir=~/dotfiles                    # dotfiles directory
