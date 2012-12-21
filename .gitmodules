@@ -14,7 +14,4 @@
 	path = shellStuff/zsh-syntax-highlighting
 	url = https://github.com/zabador/zsh-syntax-highlighting.git
 
-[submodule "shellStuff/vim-android"]
-	path = shellStuff/vim-android
-	url = https://github.com/zabador/vim-android.git
 
