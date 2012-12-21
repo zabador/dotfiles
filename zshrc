@@ -116,6 +116,7 @@ export PATH=$PATH:/home/skye/uportal/groovy-1.8.5/bin
 export JAVA_HOME=/home/skye/uportal/jdk1.6.0_32
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/opt/PostgreSQL/9.0/bin/
+export PATH=$PATH:/home/skye/.shellStuff/PySpotifyInfo
 
 fpath=(~/.shellStuff/zsh-completions $fpath)
 fpath=($fpath ~/.zsh/func)
