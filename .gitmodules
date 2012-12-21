@@ -12,3 +12,6 @@
 	url = https://github.com/zabador/zsh-syntax-highlighting.git
 
 
+[submodule "shellStuff/PySpotifyInfo"]
+	path = shellStuff/PySpotifyInfo
+	url = https://github.com/zabador/PySpotifyInfo.git
