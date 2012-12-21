@@ -2,9 +2,6 @@
 	path = shellStuff/zsh-history-substring-search
 	url = https://github.com/zabador/zsh-history-substring-search.git
 
-[submodule "shellStuff/PySpotifyInfo"]
-	path = shellStuff/PySpotifyInfo
-	url = https://github.com/zabador/PySpotifyInfo.git
 
 [submodule "shellStuff/zsh-git-prompt"]
 	path = shellStuff/zsh-git-prompt
@@ -14,7 +11,4 @@
 	path = shellStuff/zsh-syntax-highlighting
 	url = https://github.com/zabador/zsh-syntax-highlighting.git
 
-[submodule "shellStuff/vim-android"]
-	path = shellStuff/vim-android
-	url = https://github.com/zabador/vim-android.git
 
