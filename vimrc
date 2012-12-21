@@ -98,3 +98,7 @@ if exists("syntax on")
 set tags+=/home/zabador/.vim/tags
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
+"Added by android-vim:
+set tags+=/home/zabador/.vim/tags
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+let g:SuperTabDefaultCompletionType = 'context'
