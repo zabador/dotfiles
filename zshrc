@@ -102,27 +102,27 @@ cd(){
 }
 
 export PATH=$PATH:/user/bin/jlint
-export PATH=$PATH:/home/skye/Downloads/make-3.75
-export ANDROID_SDK=/home/skye/.android-sdks
+export PATH=$PATH:/home/zabador/Downloads/make-3.75
+export ANDROID_SDK=/home/zabador/.android-sdks
 export PATH=$PATH:$ANDROID_SDK/tools
 export PATH=$PATH:$ANDROID_SDK/platform-tools
-export M2_HOME=/home/skye/uportal/apache-maven-3.0.4
+export M2_HOME=/home/zabador/uportal/apache-maven-3.0.4
 export PATH=$PATH:$M2_HOME/bin
-export TOMCAT_HOME=/home/skye/uportal/apache-tomcat-6.0.35
+export TOMCAT_HOME=/home/zabador/uportal/apache-tomcat-6.0.35
 export JAVA_OPTS="-server -XX:MaxPermSize=400m -Xms1024m -Xmx2048m"
-export ANT_HOME=/home/skye/uportal/apache-ant-1.8.2
+export ANT_HOME=/home/zabador/uportal/apache-ant-1.8.2
 export PATH=$PATH:$ANT_HOME/bin
-export PATH=$PATH:/home/skye/uportal/groovy-1.8.5/bin
-export JAVA_HOME=/home/skye/uportal/jdk1.6.0_32
+export PATH=$PATH:/home/zabador/uportal/groovy-1.8.5/bin
+export JAVA_HOME=/home/zabador/uportal/jdk1.6.0_32
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/opt/PostgreSQL/9.0/bin/
-export PATH=$PATH:/home/skye/.shellStuff/PySpotifyInfo
+export PATH=$PATH:/home/zabador/.shellStuff/PySpotifyInfo
 
 fpath=(~/.shellStuff/zsh-completions $fpath)
 fpath=($fpath ~/.zsh/func)
 typeset -U fpath
 
-source /home/skye/.shellStuff/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/skye/.shellStuff/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /home/skye/.shellStuff/PySpotifyInfo/spot_info.zsh
-source /home/skye/.shellStuff/zsh-git-prompt/zshrc.sh
+source /home/zabador/.shellStuff/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/zabador/.shellStuff/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /home/zabador/.shellStuff/PySpotifyInfo/spot_info.zsh
+source /home/zabador/.shellStuff/zsh-git-prompt/zshrc.sh
