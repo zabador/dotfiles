@@ -79,6 +79,8 @@ zstyle ':vcs_info:(git):*' branchformat '%b%F{1}:%F{3}%r'
 
 alias update-new='sudo emerge --update --deep --ask --newuse world'
 alias update='sudo emerge --update --deep --ask world'
+alias java="/home/zabador/uportal/jdk1.7.0_13/bin/java"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %Cblue%cn%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev --date=relative"
 
 dircolors=$HOME/.dircolors-$(tput colors)
 
@@ -113,7 +115,7 @@ export JAVA_OPTS="-server -XX:MaxPermSize=400m -Xms1024m -Xmx2048m"
 export ANT_HOME=/home/zabador/uportal/apache-ant-1.8.2
 export PATH=$PATH:$ANT_HOME/bin
 export PATH=$PATH:/home/zabador/uportal/groovy-1.8.5/bin
-export JAVA_HOME=/home/zabador/uportal/jdk1.6.0_32
+export JAVA_HOME=/home/zabador/uportal/jdk1.7.0_13
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/opt/PostgreSQL/9.0/bin/
 export PATH=$PATH:/home/zabador/.shellStuff/PySpotifyInfo

@@ -18,14 +18,19 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif "for vjde stupid window
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-"for pathogen"
-""call pathogen#infect()
+"for hardmode"
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
+"for pathogen"
+call pathogen#infect()
+map <C-n> :NERDTreeToggle<CR>
 ""helptags /usr/share/vim/vimfiles/doc
-":helptags ~/.vim/doc
+:helptags ~/.vim/doc
 filetype plugin on
 filetype plugin indent on
 inoremap jj <ESC>
+nnoremap <silent><F9> :TagbarToggle<Cr>
 
 let g:SuperTabDefaultCompletionType = "context"
 setlocal omnifunc=javacomplete#Complete
