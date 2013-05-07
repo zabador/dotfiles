@@ -3,6 +3,9 @@ syntax enable
 
 set nocompatible
 set autoindent
+set laststatus=2
+set nocompatible
+set t_Co=256
 
 set shiftwidth=4
 set tabstop=4
@@ -13,6 +16,9 @@ set number
 set hlsearch
 set expandtab
 set si
+let mapleader ="," 
+let g:Powerline_symbols = 'fancy'
+
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif "for vjde stupid window" 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
@@ -39,10 +45,11 @@ set tags=/home/skye/tags
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
-autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
+inoremap {{ {
+autocmd Syntax html,vim,xml inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
-inoremap } <c-r>=CloseBracket()<CR>
+""inoremap } <c-r>=CloseBracket()<CR>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 
@@ -82,6 +89,7 @@ let $CLASSPATH = '$ANDROID_SDK/platforms/android-8/android.jar' . ':' . $CLASSPA
 
 set background=dark
 highlight clear
+
 if exists("syntax on")
       syntax reset
       endif

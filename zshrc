@@ -40,6 +40,8 @@ at_reverseoff=%{$'\e[27m'%}
 at_strikeoff=%{$'\e[29m'%}
 
 autoload -Uz vcs_info
+#workaround for zsh in ubuntu 12.10
+DEBIAN_PREVENT_KEYBOARD_CHANGES=yes
 
 zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
 
@@ -81,7 +83,7 @@ alias update-new='sudo emerge --update --deep --ask --newuse world'
 alias update='sudo emerge --update --deep --ask world'
 alias java="/home/zabador/uportal/jdk1.7.0_13/bin/java"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %Cblue%cn%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev --date=relative"
-
+alias :wq="echo You are not in Vim, idiot!"
 dircolors=$HOME/.dircolors-$(tput colors)
 
 if [[ -f $dircolors ]]; then
@@ -102,6 +104,13 @@ cd(){
    builtin cd "$@";
    ls;
 }
+#bind UP and DOWN arrow keys
+for keycode in '[' '0'; do
+  bindkey "^[${keycode}A" history-substring-search-up
+  bindkey "^[${keycode}B" history-substring-search-down
+done
+unset keycode
+
 
 export PATH=$PATH:/user/bin/jlint
 export PATH=$PATH:/home/zabador/Downloads/make-3.75
