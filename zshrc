@@ -84,6 +84,7 @@ alias update='sudo emerge --update --deep --ask world'
 alias java="/home/zabador/uportal/jdk1.7.0_13/bin/java"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %Cblue%cn%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev --date=relative"
 alias :wq="echo You are not in Vim, idiot!"
+alias ctags="/home/zabador/dotfiles/vim/tags"
 dircolors=$HOME/.dircolors-$(tput colors)
 
 if [[ -f $dircolors ]]; then
@@ -119,7 +120,7 @@ export PATH=$PATH:$ANDROID_SDK/tools
 export PATH=$PATH:$ANDROID_SDK/platform-tools
 export M2_HOME=/home/zabador/uportal/apache-maven-3.0.4
 export PATH=$PATH:$M2_HOME/bin
-export TOMCAT_HOME=/home/zabador/uportal/apache-tomcat-6.0.35
+export TOMCAT_HOME=/home/zabador/uportal/apache-tomcat-7.0.39
 export JAVA_OPTS="-server -XX:MaxPermSize=400m -Xms1024m -Xmx2048m"
 export ANT_HOME=/home/zabador/uportal/apache-ant-1.8.2
 export PATH=$PATH:$ANT_HOME/bin
@@ -128,6 +129,7 @@ export JAVA_HOME=/home/zabador/uportal/jdk1.7.0_13
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/opt/PostgreSQL/9.0/bin/
 export PATH=$PATH:/home/zabador/.shellStuff/PySpotifyInfo
+export PATH=$PATH:/home/zabador/dotfiles/vim/tags
 
 fpath=(~/.shellStuff/zsh-completions $fpath)
 fpath=($fpath ~/.zsh/func)

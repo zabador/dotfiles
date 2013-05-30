@@ -6,6 +6,7 @@ set autoindent
 set laststatus=2
 set nocompatible
 set t_Co=256
+set cursorline
 
 set shiftwidth=4
 set tabstop=4
@@ -28,6 +29,15 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
+"map for changing color scheme"
+map <silent><F3> :NEXTCOLOR<cr> 
+map <silent><F2> :PREVCOLOR<cr>
+
+"map for fuzzyfinder"
+nnoremap <C-f> :FufFile<cr>
+"map to open tab"
+nnoremap <leader>g :tabnew<CR>
+
 "for pathogen"
 call pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
@@ -40,12 +50,11 @@ nnoremap <silent><F9> :TagbarToggle<Cr>
 
 let g:SuperTabDefaultCompletionType = "context"
 setlocal omnifunc=javacomplete#Complete
-set tags=/home/skye/tags
+set tags=/home/zabador/tags
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap { {<CR>}<Esc>O
-inoremap {{ {
+inoremap {{ {<CR>}<Esc>O
 autocmd Syntax html,vim,xml inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
@@ -87,25 +96,26 @@ endf
 
 let $CLASSPATH = '$ANDROID_SDK/platforms/android-8/android.jar' . ':' . $CLASSPATH
 
-set background=dark
-highlight clear
-
-if exists("syntax on")
-      syntax reset
-      endif
-      
-      
-      highlight Normal     term=none cterm=none gui=none guibg=black
-      highlight Statement  term=none ctermfg=yellow  cterm=bold guifg=yellow  gui=none
-      highlight Operator   term=none ctermfg=yellow  cterm=none guifg=yellow  gui=none
-      highlight PreProc    term=none ctermfg=magenta cterm=bold guifg=magenta gui=none
-      highlight Identifier term=none ctermfg=cyan    cterm=bold guifg=cyan    gui=none
-      highlight Type       term=none ctermfg=green    cterm=bold guifg=green    gui=none
-      highlight Special    term=none ctermfg=cyan    cterm=bold guifg=cyan    gui=none
-      highlight String     term=none ctermfg=red    cterm=bold guifg=red    gui=none
-      highlight Number     term=none ctermfg=red    cterm=bold guifg=red    gui=none
-      highlight Constant   term=none ctermfg=red    cterm=bold guifg=red    gui=none
-      highlight Comment    term=none ctermfg=blue     cterm=none guifg=blue     gui=none
+""set background=dark
+colorscheme mytheme
+""highlight clear
+""
+""if exists("syntax on")
+""      syntax reset
+""      endif
+""      
+""      
+""      highlight Normal     term=none cterm=none ctermfg="#4D2F2D" gui=none guibg=black
+""      highlight Statement  term=none ctermfg=yellow  cterm=bold guifg=yellow  gui=none
+""      highlight Operator   term=none ctermfg=yellow  cterm=none guifg=yellow  gui=none
+""      highlight PreProc    term=none ctermfg=magenta cterm=bold guifg=magenta gui=none
+""      highlight Identifier term=none ctermfg=cyan    cterm=bold guifg=cyan    gui=none
+""      highlight Type       term=none ctermfg=green    cterm=bold guifg=green    gui=none
+""      highlight Special    term=none ctermfg=cyan    cterm=bold guifg=cyan    gui=none
+""      highlight String     term=none ctermfg=red    cterm=bold guifg=red    gui=none
+""      highlight Number     term=none ctermfg=red    cterm=bold guifg=red    gui=none
+""      highlight Constant   term=none ctermfg=red    cterm=bold guifg=red    gui=none
+""      highlight Comment    term=none ctermfg=blue     cterm=none guifg=blue     gui=none
       "
 "Added by android-vim:
 set tags+=/home/zabador/.vim/tags
