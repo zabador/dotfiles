@@ -7,6 +7,7 @@ set laststatus=2
 set nocompatible
 set t_Co=256
 set cursorline
+set guitablabel=%N\ %f
 
 set shiftwidth=4
 set tabstop=4
@@ -19,14 +20,57 @@ set expandtab
 set si
 let mapleader ="," 
 let g:Powerline_symbols = 'fancy'
+let g:nerdtree_tabs_open_on_console_startup=1
 
+"Rename tabs to show tab# and # of viewports
+if exists("+showtabline")
+    function! MyTabLine()
+        let s = ''
+        let wn = ''
+        let t = tabpagenr()
+        let i = 1
+        while i <= tabpagenr('$')
+            let buflist = tabpagebuflist(i)
+            let winnr = tabpagewinnr(i)
+            let s .= '%' . i . 'T'
+            let s .= (i == t ? '%1*' : '%2*')
+            let s .= ' '
+            let wn = tabpagewinnr(i,'$')
+
+            let s .= (i== t ? '%#TabNumSel#' : '%#TabNum#')
+            let s .= i
+            let s .= ' %*'
+            let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+            let bufnr = buflist[winnr - 1]
+            let file = bufname(bufnr)
+            let buftype = getbufvar(bufnr, 'buftype')
+            if buftype == 'nofile'
+                if file =~ '\/.'
+                    let file = substitute(file, '.*\/\ze.', '', '')
+                endif
+            else
+                let file = fnamemodify(file, ':p:t')
+            endif
+            if file == ''
+                let file = '[No Name]'
+            endif
+            let s .= file
+            let s .= (i == t ? '%m' : '')
+            let i = i + 1
+        endwhile
+        let s .= '%T%#TabLineFill#%='
+        return s
+    endfunction
+    set stal=2
+    set tabline=%!MyTabLine()
+endif
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif "for vjde stupid window" 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "for hardmode"
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+""autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 "map for changing color scheme"
@@ -37,6 +81,11 @@ map <silent><F2> :PREVCOLOR<cr>
 nnoremap <C-f> :FufFile<cr>
 "map to open tab"
 nnoremap <leader>g :tabnew<CR>
+
+"NERDtree"
+autocmd vimenter * NERDTree
+let g:NERDTreeWinPos = "right"
+autocmd VimEnter * wincmd h
 
 "for pathogen"
 call pathogen#infect()
@@ -61,6 +110,12 @@ inoremap ] <c-r>=ClosePair(']')<CR>
 ""inoremap } <c-r>=CloseBracket()<CR>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
+
+"move around windows"
+noremap <silent> <C-h> :wincmd h<cr>
+noremap <silent> <C-j> :wincmd j<cr>
+noremap <silent> <C-k> :wincmd k<cr>
+noremap <silent> <C-l> :wincmd l<cr>
 
 nmap <F4> "zyeb"xywmagg]m%O<Esc>opublic <Esc>"xpAget<Esc>"zpb3l~A()<Esc>o{ <Esc>oreturn this.<Esc>"zpA;<Esc>o" c>o<Esc>opublic void set<Esc>"zpb3l~A(<Esc>"xpA<Esc>"zpA)<Esc>o{ <Esc>othis.<Esc>"zpA = <Esc>"zpA;<Esc>o c>'a'"
 function ClosePair(char)

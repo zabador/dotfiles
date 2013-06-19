@@ -54,7 +54,7 @@ if [ -n vcs_info_msg_0_ ]; then
 PROMPT="
 ${fg_lred}%n@%m${fg_pink}%~ $(git_super_status)
 ${fg_lred}1337ness--> ${at_normal}"
-RPROMPT="${fg_green}$(spotify)"
+RPROMPT=
 else
 PROMPT="
 ${fg_lred}%n@%m${fg_pink}%~

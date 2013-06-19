@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/zabador/uportal/uPortal/uportal-war/src/main/data/default_entities/group_membership'
 let g:netrw_dirhist_2='/home/zabador/Downloads/plugin'
+let g:netrw_dirhist_3='/home/zabador/p/android/gitmysail/mysail_android_app'
