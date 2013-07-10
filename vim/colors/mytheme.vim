@@ -18,10 +18,10 @@ highlight Number     term=none ctermfg=red    cterm=bold guifg=red    gui=none
 highlight Constant   term=none ctermfg=red    cterm=bold guifg=red    gui=none
 highlight Comment    term=none ctermfg=blue     cterm=none guifg=blue     gui=none
 hi TabLineSel term=bold cterm=bold ctermfg=16 ctermbg=229
-hi TabWinNumSel term=bold cterm=bold ctermfg=90 ctermbg=229
+"hi TabWinNumSel term=bold cterm=bold ctermfg=90 ctermbg=229
 hi TabNumSel term=bold cterm=bold ctermfg=16 ctermbg=229
 
 hi TabLine term=underline ctermfg=16 ctermbg=145
-hi TabWinNum term=bold cterm=bold ctermfg=90 ctermbg=145
+"hi TabWinNum term=bold cterm=bold ctermfg=90 ctermbg=145
 hi TabNum term=bold cterm=bold ctermfg=90 ctermbg=145
 
