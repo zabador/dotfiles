@@ -18,9 +18,24 @@ set number
 set hlsearch
 set expandtab
 set si
+set undofile
+set undodir=$HOME/.vimundo
 let mapleader ="," 
 let g:Powerline_symbols = 'fancy'
 let g:nerdtree_tabs_open_on_console_startup=1
+
+"automatic import for java
+:noremap <F5> <Esc>
+ \<C-W>}o//TEMP MARKER<Esc>
+ \<C-W>P1G/public class<CR><Esc>yy<C-W>pG?import<CR><Esc>p<Esc>
+ \<C-W>P1G/package<CR><Esc>yy<C-W>pG?import<CR><Esc>p<Esc>
+ \$xa.<Esc>0jwwi<CR><Esc>kdd<Esc>
+ \wDx<Esc>kJxx<Esc>$a;<Esc>
+ \0cwimport<Esc>
+ \:update<CR><Esc>
+ \/TEMP MARKER<CR>dd<Esc>
+
+:noremap <F6> :update<CR>:make<CR><C-W>j<Esc>:cw 3<CR><C-W>p
 
 "Rename tabs to show tab# and # of viewports
 if exists("+showtabline")
@@ -112,10 +127,14 @@ inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
 
 "move around windows"
-noremap <silent> <C-h> :wincmd h<cr>
-noremap <silent> <C-j> :wincmd j<cr>
-noremap <silent> <C-k> :wincmd k<cr>
-noremap <silent> <C-l> :wincmd l<cr>
+    noremap <silent> <C-h> :wincmd h<cr>
+    noremap <silent> <C-j> :wincmd j<cr>
+    noremap <silent> <C-k> :wincmd k<cr>
+    noremap <silent> <C-l> :wincmd l<cr>
+
+nnoremap<C-down> :m +1<Esc>
+nnoremap<C-up> :m -2<Esc>
+
 
 nmap <F4> "zyeb"xywmagg]m%O<Esc>opublic <Esc>"xpAget<Esc>"zpb3l~A()<Esc>o{ <Esc>oreturn this.<Esc>"zpA;<Esc>o" c>o<Esc>opublic void set<Esc>"zpb3l~A(<Esc>"xpA<Esc>"zpA)<Esc>o{ <Esc>othis.<Esc>"zpA = <Esc>"zpA;<Esc>o c>'a'"
 function ClosePair(char)
