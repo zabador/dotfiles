@@ -37,6 +37,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 
 :noremap <F6> :update<CR>:make<CR><C-W>j<Esc>:cw 3<CR><C-W>p
 
+
 "Rename tabs to show tab# and # of viewports
 if exists("+showtabline")
     function! MyTabLine()
@@ -105,6 +106,9 @@ autocmd VimEnter * wincmd h
 "for pathogen"
 call pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
+
+"javascript highlighting"
+
 ""helptags /usr/share/vim/vimfiles/doc
 :helptags ~/.vim/doc
 filetype plugin on
