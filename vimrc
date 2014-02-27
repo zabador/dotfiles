@@ -107,7 +107,7 @@ autocmd VimEnter * wincmd h
 call pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
-"javascript highlighting"
+
 
 ""helptags /usr/share/vim/vimfiles/doc
 :helptags ~/.vim/doc
