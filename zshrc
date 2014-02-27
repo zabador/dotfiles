@@ -81,10 +81,12 @@ zstyle ':vcs_info:(git):*' branchformat '%b%F{1}:%F{3}%r'
 
 alias update-new='sudo emerge --update --deep --ask --newuse world'
 alias update='sudo emerge --update --deep --ask world'
-alias java="/home/zabador/uportal/jdk1.7.0_13/bin/java"
+#alias java="/home/zabador/uportal/jdk1.7.0_13/bin/java"
+alias java="/usr/bin/java"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset - %Cblue%cn%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev --date=relative"
 alias :wq="echo You are not in Vim, idiot!"
 alias ctags="/home/zabador/dotfiles/vim/tags"
+alias fixmouse="sudo rmmod psmouse && sudo modprobe psmouse"
 dircolors=$HOME/.dircolors-$(tput colors)
 
 if [[ -f $dircolors ]]; then
@@ -113,23 +115,29 @@ done
 unset keycode
 
 
+export AWT_TOOLKIT=MToolKit
 export PATH=$PATH:/user/bin/jlint
 export PATH=$PATH:/home/zabador/Downloads/make-3.75
+export PKG_CONFIG_PATH=/home/zabador/.opencv
 export ANDROID_SDK=/home/zabador/.android-sdks
+export ANDROID_NDK=/home/zabador/.android-ndk
+export PATH=$PATH:$ANDROID_NDK
+export PATH=$PATH:$PKG_CONFIG_PATH
 export PATH=$PATH:$ANDROID_SDK/tools
 export PATH=$PATH:$ANDROID_SDK/platform-tools
-export M2_HOME=/home/zabador/uportal/apache-maven-3.0.4
+export M2_HOME=/home/zabador/.apache-maven-3.1.1
 export PATH=$PATH:$M2_HOME/bin
 export TOMCAT_HOME=/home/zabador/uportal/apache-tomcat-7.0.39
 export JAVA_OPTS="-server -XX:MaxPermSize=400m -Xms1024m -Xmx2048m"
 export ANT_HOME=/home/zabador/uportal/apache-ant-1.8.2
 export PATH=$PATH:$ANT_HOME/bin
 export PATH=$PATH:/home/zabador/uportal/groovy-1.8.5/bin
-export JAVA_HOME=/home/zabador/uportal/jdk1.7.0_13
-export PATH=$PATH:$JAVA_HOME/bin
+#export JAVA_HOME=/home/zabador/uportal/jdk1.7.0_13
+#export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/opt/PostgreSQL/9.0/bin/
 export PATH=$PATH:/home/zabador/.shellStuff/PySpotifyInfo
 export PATH=$PATH:/home/zabador/dotfiles/vim/tags
+export PATH=$PATH:/home/zabador/.google_appengine
 
 fpath=(~/.shellStuff/zsh-completions $fpath)
 fpath=($fpath ~/.zsh/func)
@@ -139,3 +147,5 @@ source /home/zabador/.shellStuff/zsh-syntax-highlighting/zsh-syntax-highlighting
 source /home/zabador/.shellStuff/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /home/zabador/.shellStuff/PySpotifyInfo/spot_info.zsh
 source /home/zabador/.shellStuff/zsh-git-prompt/zshrc.sh
+
+

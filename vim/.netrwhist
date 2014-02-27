@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/zabador/uportal/uPortal/uportal-war/src/main/data/default_entities/group_membership'
 let g:netrw_dirhist_2='/home/zabador/Downloads/plugin'
 let g:netrw_dirhist_3='/home/zabador/p/android/gitmysail/mysail_android_app'
 let g:netrw_dirhist_4='/home/zabador/.vimundo'
 let g:netrw_dirhist_5='/home/zabador/dotfiles/shellStuff/zsh-git-prompt'
+let g:netrw_dirhist_6='/home/zabador/p/phonegap/umobile-phonegap-android/umobile-ui/src/js/src'

@@ -152,20 +152,6 @@ JavaHiLink javaCommentCharacter javaCharacter
 
 syn cluster javaTop add=javaComment,javaLineComment
 
-if !exists("java_ignore_javadoc") && main_syntax != 'jsp'
-  syntax case ignore
-  " syntax coloring for javadoc comments (HTML)
-  syntax include @javaHtml <sfile>:p:h/html.vim
-  unlet b:current_syntax
-  syn region  javaDocComment    start="/\*\*"  end="\*/" keepend contains=javaCommentTitle,@javaHtml,javaDocTags,javaTodo,@Spell
-  syn region  javaCommentTitle  contained matchgroup=javaDocComment start="/\*\*"   matchgroup=javaCommentTitle keepend end="\.$" end="\.[ \t\r<&]"me=e-1 end="[^{]@"me=s-2,he=s-1 end="\*/"me=s-1,he=s-1 contains=@javaHtml,javaCommentStar,javaTodo,@Spell,javaDocTags
-
-  syn region javaDocTags  contained start="{@\(link\|linkplain\|inherit[Dd]oc\|doc[rR]oot\|value\)" end="}"
-  syn match  javaDocTags  contained "@\(see\|param\|exception\|throws\|since\)\s\+\S\+" contains=javaDocParam
-  syn match  javaDocParam contained "\s\S\+"
-  syn match  javaDocTags  contained "@\(version\|author\|return\|deprecated\|serial\|serialField\|serialData\)\>"
-  syntax case match
-endif
 
 " match the special comment /**/
 syn match   javaComment		 "/\*\*/"
